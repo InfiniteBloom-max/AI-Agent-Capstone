@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+httpx
+pydantic
+pydantic-settings
+pinecone
+pymupdf
+Pillow
+redis
+pdfminer.six
+networkx
+python-dotenv

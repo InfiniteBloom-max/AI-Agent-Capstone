@@ -1,0 +1,22 @@
+[project]
+name = "flowmind"
+version = "0.1.0"
+description = "FlowMind Agent Collection"
+authors = [
+    {name = "Ronit", email = "ronit@example.com"},
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "httpx",
+    "pydantic",
+    "pydantic-settings",
+    "neo4j",
+    "pinecone-client",
+    "redis",
+]
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

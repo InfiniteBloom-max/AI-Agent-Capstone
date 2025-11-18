@@ -1,0 +1,104 @@
+{
+  "nodes": [
+    {
+      "name": "Multi-Agent System",
+      "definition": "A decentralized AI architecture where multiple specialized agents (Ingestion Swarm, Pedagogy Swarm) work together under an orchestrator to process documents and provide personalized teaching.",
+      "embedding_id": "concept_0",
+      "source_doc": "manual",
+      "source_page": 1,
+      "node_type": "concept"
+    },
+    {
+      "name": "Pedagogy Swarm",
+      "definition": "The teaching component of FlowMind that provides Socratic tutoring, generates explanations grounded in the concept graph, and validates responses to prevent hallucinations.",
+      "embedding_id": "concept_1",
+      "source_doc": "manual",
+      "source_page": 1,
+      "node_type": "concept"
+    },
+    {
+      "name": "Ingestion Swarm",
+      "definition": "The document processing pipeline that parses PDFs, extracts concepts, and maps relationships to build the knowledge graph.",
+      "embedding_id": "concept_2",
+      "source_doc": "manual",
+      "source_page": 1,
+      "node_type": "concept"
+    },
+    {
+      "name": "Concept Graph",
+      "definition": "A structured knowledge representation where nodes are key concepts/definitions (with embeddings) and edges are semantic relationships (e.g., 'is-prerequisite-for', 'is-part-of'). Enables interactive, non-linear learning by revealing connections between ideas across documents, unlike flat summaries.",
+      "embedding_id": "concept_1",
+      "source_doc": "doc_1",
+      "source_page": 1,
+      "node_type": "concept"
+    },
+    {
+      "name": "Hallucination Mitigation",
+      "definition": "Techniques to prevent AI from generating false information, including grounding explanations in verified concept graph data and using a critic agent to validate responses.",
+      "embedding_id": "concept_4",
+      "source_doc": "manual",
+      "source_page": 1,
+      "node_type": "concept"
+    },
+    {
+      "name": "Multi-Agent System (Orchestrator-Worker Pattern)",
+      "definition": "A decentralized AI architecture where specialized agents (workers) perform distinct tasks (e.g., parsing, teaching) under the coordination of a central orchestrator (FlowMindOrchestrator). This pattern reduces error propagation, improves modularity, and enables parallel/sequential processing for complex workflows like PDF-to-concept-graph transformation.",
+      "embedding_id": "concept_0",
+      "source_doc": "doc_1",
+      "source_page": 1,
+      "node_type": "concept"
+    },
+    {
+      "name": "Agent Specialization & Accountability",
+      "definition": "Division of labor among five LLM-driven agents (Parsing, Concept Extraction, Relationship Mapping, Teaching, Critic), each with constrained roles to minimize hallucinations. Specialization ensures robustness\u2014e.g., the Critic Agent validates outputs to enforce factual grounding before user exposure.",
+      "embedding_id": "concept_2",
+      "source_doc": "doc_1",
+      "source_page": 1,
+      "node_type": "concept"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Multi-Agent System",
+      "target": "Pedagogy Swarm",
+      "relation_type": "INCLUDES",
+      "confidence": 0.95
+    },
+    {
+      "source": "Multi-Agent System",
+      "target": "Ingestion Swarm",
+      "relation_type": "INCLUDES",
+      "confidence": 0.95
+    },
+    {
+      "source": "Pedagogy Swarm",
+      "target": "Hallucination Mitigation",
+      "relation_type": "USES",
+      "confidence": 0.9
+    },
+    {
+      "source": "Pedagogy Swarm",
+      "target": "Concept Graph",
+      "relation_type": "USES",
+      "confidence": 0.9
+    },
+    {
+      "source": "Ingestion Swarm",
+      "target": "Concept Graph",
+      "relation_type": "CREATES",
+      "confidence": 0.95
+    },
+    {
+      "source": "Concept Graph",
+      "target": "Multi-Agent System (Orchestrator-Worker Pattern)",
+      "relation_type": "PartOf",
+      "confidence": 0.78
+    },
+    {
+      "source": "Multi-Agent System (Orchestrator-Worker Pattern)",
+      "target": "Concept Graph",
+      "relation_type": "Uses",
+      "confidence": 0.8
+    }
+  ]
+}

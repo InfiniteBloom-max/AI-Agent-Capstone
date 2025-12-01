@@ -33,7 +33,7 @@ graph TD
     
     subgraph "Ingestion Swarm"
         API --> Parse[Parsing Agent]
-        Parse --> Vision[Vision Agent (Multimodal)]
+        Parse --> Vision[Vision Agent Multimodal]
         Parse --> Text[Concept Agent]
         Vision & Text --> Graph[Relationship Agent]
         Graph --> DB[(Knowledge Graph + Vector DB)]
@@ -88,16 +88,16 @@ Text and Images are treated as first-class citizens.
 
 Below are visualizations of the system's processing and outputs:
 
-![System Visualization 1](images\img_1.png)
+![System Visualization 1](images/img_1.png)
 *Figure 1: System process visualization*
 
-![System Visualization 2](images\img_3.png)
+![System Visualization 2](images/img_3.png)
 *Figure 2: Data flow diagram*
 
-![System Visualization 3](images\img_4.png)
+![System Visualization 3](images/img_4.png)
 *Figure 3: Detailed component interaction*
 
-![System Visualization 4](images\img_5.png)
+![System Visualization 4](images/img_5.png)
 *Figure 4: Comprehensive architecture overview*
 
 ---

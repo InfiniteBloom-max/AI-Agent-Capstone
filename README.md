@@ -100,6 +100,9 @@ Below are visualizations of the system's processing and outputs:
 ![System Visualization 4](images/img_5.png)
 *Figure 4: Comprehensive architecture overview*
 
+
+![Deployment Log](deploy_log.png)
+*Figure : Deployment activity log captured during the pilot program.*
 ---
 
 ##  Setup Instructions

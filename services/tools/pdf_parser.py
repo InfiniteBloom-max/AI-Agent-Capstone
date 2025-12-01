@@ -1,4 +1,3 @@
-import layoutparser as lp
 from pdfminer.high_level import extract_text
 import logging
 

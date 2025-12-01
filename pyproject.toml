@@ -3,7 +3,7 @@ name = "flowmind"
 version = "0.1.0"
 description = "FlowMind Agent Collection"
 authors = [
-    {name = "Ronit", email = "ronit@example.com"},
+    {name = "Ronith", email = "ronithrashmikara@gmail.com"},
 ]
 dependencies = [
     "fastapi",

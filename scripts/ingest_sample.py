@@ -2,6 +2,7 @@ import asyncio
 import sys
 import os
 
+# Script to test ingetsion by adding a sample document 
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
